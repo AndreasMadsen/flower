@@ -1,0 +1,28 @@
+{
+  "name": "flower",
+  "description": "Collection of stream classes",
+  "version": "0.0.1",
+  "author": "Andreas Madsen <amwebdk@gmail.com>",
+  "scripts": {
+    "test": "vows test/simple/* --spec --isolate"
+  },
+  "main": "./flower.js",
+  "repository" : {
+    "type": "git",
+    "url": "git://github.com/AndreasMadsen/flower.git"
+  },
+  "keywords": [
+    "stream",
+    "buffer",
+    "pipe",
+    "convert"
+  ],
+  "devDependencies": {
+    "vows" :  "0.6.x"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "0.6 || 0.7 || 0.8",
+    "npm": "1"
+  }
+}
