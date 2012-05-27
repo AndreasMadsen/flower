@@ -3,14 +3,14 @@
  * MIT License
  */
 
-exports.RelayStream = require('./lib/relay_stream.js');
-exports.relayStream = function () {
-  return new exports.RelayStream();
+exports.RelayReadStream = require('./lib/relay_read_stream.js');
+exports.relayReadStream = function () {
+  return new exports.RelayReadStream();
 };
 
-exports.Buffer2stream = require('./lib/relay_stream.js');
+exports.Buffer2stream = require('./lib/buffer_to_stream.js');
 exports.buffer2stream = function (buffer, options) {
   return new exports.Buffer2stream(buffer, options);
 };
 
-exports.stream2buffer = require('./lib/relay_stream.js');
+exports.stream2buffer = require('./lib/stream_to_buffer.js');
