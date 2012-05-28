@@ -4,8 +4,6 @@
  */
 
 var vows = require('vows'),
-    path = require('path'),
-    fs = require('fs'),
     crypto = require('crypto'),
     assert = require('assert'),
     common = require('../common.js'),
