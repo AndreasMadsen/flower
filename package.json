@@ -1,7 +1,7 @@
 {
   "name": "flower",
   "description": "Collection of stream classes and functions",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": "Andreas Madsen <amwebdk@gmail.com>",
   "scripts": {
     "test": "vows test/simple/* --spec --isolate"
@@ -18,7 +18,8 @@
     "convert"
   ],
   "devDependencies": {
-    "vows" :  "0.6.x"
+    "vows" :  "0.6.x",
+    "wrench" : "1.3.x"
   },
   "license": "MIT",
   "engines": {
