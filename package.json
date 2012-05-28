@@ -1,7 +1,7 @@
 {
   "name": "flower",
   "description": "Collection of stream classes and functions",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Andreas Madsen <amwebdk@gmail.com>",
   "scripts": {
     "test": "vows test/simple/* --spec --isolate"
