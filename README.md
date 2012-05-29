@@ -32,6 +32,37 @@ exports.read = function () {
 };
 ```
 
+### flowers.memoryStream()
+
+_Also available as javascript constructor at `flowers.MemoryStream()`_
+
+returns `WriteStream` that you can pipe to using a `ReadStream`. The data chunks
+will be stored seperatly in the `memoryStream`, on the same time or after data are
+being piped to the `memoryStream` you can create a new `ReadStream` from it by using
+``memoryStream.relay()`, the returned `ReadStream` will then emit the stored an new
+chunks in propper order.
+
+Example of how this can be used to implement a filecache
+
+```JavaScript
+var filecache = {};
+
+function request(filename) {
+  if (filecache[filename] === undefined) {
+    filecache[filename] = flower.memoryStream();
+    fs.createReadStream(filename).pipe(filecache[filename]);
+  }
+  return filecache[filename].relay();
+}
+
+// request files
+request('file.txt');
+
+//multiply request will share the filestream
+request('file.txt');
+request('file.txt');
+```
+
 ### flowers.buffer2stream(buffer, [options])
 
 _Also available as javascript constructor at `flowers.Buffer2stream()`_

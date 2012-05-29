@@ -13,4 +13,9 @@ exports.buffer2stream = function (buffer, options) {
   return new exports.Buffer2stream(buffer, options);
 };
 
+exports.MemoryStream = require('./lib/memory_stream.js');
+exports.memoryStream = function () {
+  return new exports.MemoryStream();
+};
+
 exports.stream2buffer = require('./lib/stream_to_buffer.js');
