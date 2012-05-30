@@ -37,6 +37,11 @@ vows.describe('testing stream to buffer').addBatch({
           memory = flower.memoryStream();
           fs.createReadStream(filepath).pipe(memory);
 
+          // TESTCASE: this can be emitted at any time so it can't be contained in a context
+          memory.once('close', function () {
+            assert.equal(memory.size, content.length);
+          });
+
           // create a paused relay stream
           self.callback(error, memory, content);
         });

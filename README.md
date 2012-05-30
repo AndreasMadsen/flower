@@ -42,6 +42,9 @@ being piped to the `memoryStream` you can create a new `ReadStream` from it by u
 ``memoryStream.relay()`, the returned `ReadStream` will then emit the stored an new
 chunks in propper order.
 
+Note add chunks are writen to the `memoryStream` its `size` property will increase. This
+property contains the total buffer size.
+
 Example of how this can be used to implement a filecache
 
 ```JavaScript
