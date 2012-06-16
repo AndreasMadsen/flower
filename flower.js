@@ -9,7 +9,7 @@ exports.relayReadStream = function () {
 };
 
 exports.QueryStream = require('./lib/query_stream.js');
-exports.relayReadStream = function () {
+exports.queryStream = function () {
   return new exports.QueryStream();
 };
 

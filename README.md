@@ -32,6 +32,37 @@ exports.read = function () {
 };
 ```
 
+### flowers.queryStream()
+
+_Also available as javascript constructor at `flowers.QueryStream()`_
+
+Will return a `ReadStream` and `WritStream` object.
+
+The stream is much like `flower.relayReadStream()` however it is much more
+complex. This has both advantages and disadvantages.
+
+The advantages are that you can write to the stream as much as you want
+but the data chunks won't emit if it is paused. Instead they gets pulled
+to an query list. You can also apply multiply pipes to the stream, the
+previouse piped `ReadStream` will simply be destroy to prevent race
+conditions.
+
+The disadvantages with this stream is that you easily will end up with
+a huge query stack consumeing a lot of memory.
+
+```JavaScript
+var output = flowers.queryStream();
+output.pause();
+output.write('A');
+output.write('B');
+
+var input = fs.createWritStream('file.txt');
+input.on('open', function () {
+  output.pipe(input);
+  output.resume();
+});
+```
+
 ### flowers.memoryStream()
 
 _Also available as javascript constructor at `flowers.MemoryStream()`_
