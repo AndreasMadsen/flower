@@ -8,6 +8,11 @@ exports.relayReadStream = function () {
   return new exports.RelayReadStream();
 };
 
+exports.QueryStream = require('./lib/query_stream.js');
+exports.relayReadStream = function () {
+  return new exports.QueryStream();
+};
+
 exports.Buffer2stream = require('./lib/buffer_to_stream.js');
 exports.buffer2stream = function (buffer, options) {
   return new exports.Buffer2stream(buffer, options);
