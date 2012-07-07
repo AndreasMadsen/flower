@@ -9,8 +9,8 @@ var wrench = require('wrench');
 var events = require('events');
 
 // node < 0.8 compatibility
-exports.exists = fs.exists || path.exists;
-exports.existsSync = fs.existsSync || path.existsSync;
+exports.exists = fs.exists || fs.exists;
+exports.existsSync = fs.existsSync || fs.existsSync;
 
 // resolve main dirpaths
 exports.test = path.dirname(module.filename);
