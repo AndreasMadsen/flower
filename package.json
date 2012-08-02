@@ -1,7 +1,7 @@
 {
   "name": "flower",
   "description": "Collection of stream classes and functions",
-  "version": "0.5.5",
+  "version": "0.6.0",
   "author": "Andreas Madsen <amwebdk@gmail.com>",
   "scripts": {
     "test": "vows test/simple/* --spec --isolate"
@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "0.6 || 0.8",
+    "node": "0.6 || 0.8 || 0.9",
     "npm": "1"
   }
 }
