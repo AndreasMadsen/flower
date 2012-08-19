@@ -121,9 +121,6 @@ The buffer is then send as a callback argument.
 
 The `callback` have two arguments `error` and `buffer`.
 
-The `options` object takes a `chunkSize` property there tell how big each chunk
-should be in bytes. By default this is `64 * 1024`.
-
 ```JavaScript
 var stream = fs.createReadStream('file.txt');
 
