@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/AndreasMadsen/flower.png)](http://travis-ci.org/AndreasMadsen/flower)
 #flowers
 
 **flowers is a collection of stream helpers.**
