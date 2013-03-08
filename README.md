@@ -8,6 +8,16 @@
 npm install flowers
 ```
 
+## Node support
+
+This module is made for node `v0.8` and will not be maintained for newer
+versions of node, because the stream2 interface makes some of these methods
+unnecessary. Howerver the good parts have been rewriten for node `v0.10` and
+splited up intro smaller modules:
+
+* buffer2stream: [startpoint](https://github.com/AndreasMadsen/startpoint)
+* stream2buffer: [endpoint](https://github.com/AndreasMadsen/endpoint)
+
 ##API documentation
 
 ### flowers.relayReadStream()
